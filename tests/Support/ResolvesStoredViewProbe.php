@@ -7,7 +7,7 @@ namespace Velm\Admin\Tests\Support;
 use Velm\Admin\Pages\ArchListPage;
 use Velm\Admin\Support\ResolvesStoredView;
 
-final class ArchListProbe extends ArchListPage
+final class ResolvesStoredViewProbe extends ArchListPage
 {
     use ResolvesStoredView;
 
@@ -20,16 +20,6 @@ final class ArchListProbe extends ArchListPage
     protected function arch(): array
     {
         return $this->probeArch;
-    }
-
-    protected function openRecordUrl(int $recordId): ?string
-    {
-        return null;
-    }
-
-    protected function editRecordUrl(int $recordId): ?string
-    {
-        return null;
     }
 
     protected function velmViewModule(): string
